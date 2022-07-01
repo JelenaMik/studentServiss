@@ -9,15 +9,8 @@ public class Exam {
         this.course = course;
     }
 
-    public Exam() {
-    }
-
     public Course getCourse() {
         return course;
-    }
-
-    public void setCourse(Course course) {
-        this.course = course;
     }
 
     @Override

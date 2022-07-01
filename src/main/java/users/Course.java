@@ -15,14 +15,6 @@ public class Course{
     public Teacher teacher;
     private ArrayList<Student> studentsList = new ArrayList<>();
 
-    public Course(String name, Teacher teacher, ArrayList<Student> studentsList) {
-        this.name = name;
-        this.teacher = teacher;
-        this.studentsList = studentsList;
-    }
-
-
-
     public ArrayList<Student> getStudentsList() {
         return studentsList;
     }

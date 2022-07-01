@@ -16,26 +16,12 @@ public class Student {
         this.id = id;
     }
 
-    public Student(String name, String id, String grade) {
-        this.name = name;
-        this.id = id;
-        this.grade = grade;
-    }
-
     public String getGrade() {
         return grade;
     }
 
     public void setGrade(String grade) {
         this.grade = grade;
-    }
-
-    public Student() {
-    }
-
-
-    public String getName() {
-        return name;
     }
 
     public void setName(String name) {
@@ -50,8 +36,6 @@ public class Student {
         this.id = id;
     }
 
-
-
     @Override
     public String toString() {
         return "Student{" +
@@ -59,8 +43,5 @@ public class Student {
                 ", id='" + id + '\'' +
                 '}';
     }
-
-
-
 
 }

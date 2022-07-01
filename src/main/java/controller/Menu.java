@@ -1,8 +1,6 @@
 package controller;
 
 import javax.swing.*;
-import java.util.Calendar;
-import java.util.Date;
 
 public class Menu {
 
@@ -70,7 +68,7 @@ public class Menu {
                     results.getEditor().addCourse();
                     break;
                 case "10":
-                    results.getEditor().seeCourse(); //add to see studentList
+                    results.getEditor().seeCourse();
                     break;
                 case "11":
                     results.getEditor().editCourse();

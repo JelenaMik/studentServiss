@@ -12,15 +12,6 @@ public class ExamResults {
     public Editor editor;
     private ArrayList<Exam> exams = new ArrayList<>();
 
-    public ExamResults(Editor editor, ArrayList<Exam> exams) {
-        this.editor = editor;
-        this.exams = exams;
-    }
-
-    public ExamResults(Editor editor) {
-        this.editor = editor;
-    }
-
     public ExamResults() {
     }
 
@@ -32,24 +23,8 @@ public class ExamResults {
         this.editor = editor;
     }
 
-    public ArrayList<Exam> getExams() {
-        return exams;
-    }
-
-    public void setExams(ArrayList<Exam> exams) {
-        this.exams = exams;
-    }
-
     public void createExam(){
-        Course examCourse = (Course) JOptionPane.showInputDialog(
-                null,
-                "Select course",
-                "Exam on ",
-                JOptionPane.QUESTION_MESSAGE,
-                null,
-                editor.courses.toArray(),
-                editor.courses.toArray()[0]
-        );
+        Course examCourse = getEditor().selectCourse();
         Exam exam = new Exam(examCourse);
         exams.add(exam);
     }
@@ -71,15 +46,7 @@ public void enterGrades() {
         ArrayList<Student> currentStudentList = getStudentList();
         int input = 5;
         do{
-            Student updateStudent = (Student) JOptionPane.showInputDialog(
-                    null,
-                    "Select student",
-                    "Change grade ",
-                    JOptionPane.QUESTION_MESSAGE,
-                    null,
-                    currentStudentList.toArray(),
-                    currentStudentList.toArray()[0]
-            );
+            Student updateStudent = getEditor().selectStudent();
             updateStudent.setGrade(JOptionPane.showInputDialog(null, "Enter new grade"));
             input = JOptionPane.showConfirmDialog(null, "Do you want to update another student grade?");
         }while(input==0);
